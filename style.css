@@ -72,7 +72,7 @@ a {
 
 .slider1_container img {
 
-  max-width: 100%;
+  width: 100%;
 }
 
 .slider1_input {
@@ -80,11 +80,13 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  top: 10rem;
-  right: 40%;
-  left: 40%;
+  top: 42%;
+  /* right: 40%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-weight: bolder;
+  max-width: 35%;
 }
 
 .slider1_input h1 {
