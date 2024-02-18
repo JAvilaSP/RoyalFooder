@@ -49,3 +49,15 @@ a {
   right: -0.5rem;
   top: 0.1rem;
 }
+
+.main-header {}
+
+.main-header_in {
+  margin: 2rem 25% 2rem 25%;
+  display: flex;
+  justify-content: stretch;
+}
+
+.user img {
+  width: 24px;
+}
