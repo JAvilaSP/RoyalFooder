@@ -56,8 +56,39 @@ a {
   margin: 2rem 25% 2rem 25%;
   display: flex;
   justify-content: stretch;
+
 }
 
 .user img {
   width: 24px;
+}
+
+
+
+/* Slider 1 */
+.slider1_container {
+  position: relative;
+}
+
+.slider1_container img {
+
+  max-width: 100%;
+}
+
+.slider1_input {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 10rem;
+  right: 40%;
+  left: 40%;
+  color: white;
+  font-weight: bolder;
+}
+
+.slider1_input h1 {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 60px;
 }
