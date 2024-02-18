@@ -6,13 +6,27 @@ body {
   margin: 0;
 }
 
+ul {}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Header */
 
 .top-header {
-  background-color: lightslategray;
 
   display: flex;
   justify-content: space-around;
-  padding: 0 20% 0 20%;
+  width: 80%;
   margin: 0 auto;
+}
+
+.top-header__half {
+  display: flex;
 }
