@@ -4,6 +4,9 @@
 
 body {
   margin: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 ul {}
@@ -102,5 +105,26 @@ a {
 }
 
 .ads_flex {
-  
+  padding: 6rem 0 6rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  align-items: center;
+  text-align: center;
+}
+
+.ads_svg {
+  width: 6rem;
+  align-self: center;
+}
+
+/* Categories */
+
+.scroller {
+  display: flex;
+  justify-content: baseline;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 666px;
+  margin: 0 auto;
 }
