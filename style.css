@@ -119,12 +119,42 @@ a {
 }
 
 /* Categories */
+.section_categories {
+  margin: 5rem 0 5rem 0;
+}
 
 .scroller {
   display: flex;
   justify-content: baseline;
   overflow-x: auto;
   overflow-y: hidden;
-  width: 666px;
+  width: 60%;
   margin: 0 auto;
+  gap: 2rem;
+  scroll-behavior: smooth;
 }
+
+.scroller_img {
+  padding: 2rem;
+  border-width: 4px;
+  border-style: dotted;
+  border-color: lightgrey;
+}
+
+.scroller_ad {
+  padding: 1rem 6rem;
+  background-color: purple;
+  width: fit-content;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.scroller_ad button {
+  background: yellowgreen;
+  border: none;
+}
+
+/* Big Dishes */
+
