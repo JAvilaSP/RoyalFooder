@@ -143,17 +143,18 @@ a {
 
 .scroller_ad {
   padding: 1rem 6rem;
-  background-color: purple;
+  background-color: #143848;
   width: fit-content;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-
+  color: white;
 }
 
 .scroller_ad button {
-  background: yellowgreen;
+  background: #5bb000;
   border: none;
+  color: white;
 }
 
 /* Big Dishes */
@@ -209,9 +210,74 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 2rem 0 6rem 0;
+  margin: 6rem 0 6rem 0;
   position: relative;
   color: white;
 
   padding: 70px 33% 0 33%;
+}
+
+.people {
+  border-radius: 666px;
+  width: 100px;
+}
+
+.parallax_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  .parallax_button {
+    opacity: 50%;
+    height: 10px;
+    width: 10px;
+    transition: 0.2s;
+    background-color: white;
+    border: 0;
+  }
+
+  .parallax_button:hover {
+    opacity: 90%;
+    /* background-color: greenyellow; */
+  }
+}
+
+/* Footer */
+
+.footer_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  text-align: justify;
+  align-items: flex-start;
+
+}
+
+.social_icons {
+  padding: 0.6rem;
+
+  border-radius: 15px;
+  border-width: 1px;
+
+}
+
+#ig {
+  background-color: #3f729b;
+}
+
+#fb {
+  background-color: #3b5998;
+}
+
+#tw {
+  background-color: black;
+}
+
+#yt {
+  background-color: #CD201F;
+}
+
+#li {
+  background-color: #0077b5;
 }
