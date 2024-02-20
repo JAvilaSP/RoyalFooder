@@ -157,4 +157,61 @@ a {
 }
 
 /* Big Dishes */
+.dishes_container {
+  background-color: lightgrey;
+  padding: 6rem 15% 6rem 15%;
+}
 
+.flex_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Overflow ads */
+
+.overflow_container {
+  margin: 8rem 0 8rem;
+  gap: 30px;
+}
+
+.overlay {
+  overflow: hidden;
+  position: relative;
+}
+
+
+.overlay h4 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  color: aliceblue;
+}
+
+.overlay button {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  color: aliceblue;
+  background-color: green;
+}
+
+/* Parallax */
+.parallax {
+
+  background-image: url("img/slider1/breadcrumb.jpg");
+
+  height: 600px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2rem 0 6rem 0;
+  position: relative;
+  color: white;
+
+  padding: 70px 33% 0 33%;
+}
