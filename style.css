@@ -1,3 +1,8 @@
+:root {
+  --highlight: #143848;
+  --button-green: #5bb000;
+}
+
 * {
   align-items: center;
 }
@@ -7,6 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {}
@@ -20,7 +26,30 @@ a {
   color: inherit;
 }
 
+button {
+  background-color: var(--button-green);
+  color: white;
+  min-width: 200px;
+  min-height: 50px;
+  border: solid;
+  border-style: groove;
+  border-width: 2px;
+  border-color: #3a6b06;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #3a6b06;
+}
+
 /* Header */
+header #top-header {
+  background-color: var(--highlight);
+  color: white;
+}
 
 .top-header {
 
@@ -35,7 +64,8 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
+  margin-top: 5px;
+  margin-bottom: 5px;
   gap: 1rem;
 }
 
@@ -46,20 +76,37 @@ a {
 .lista_header1:not(:last-child)::after {
   content: "";
   width: 1px;
-  height: 16px;
+  height: 18px;
   background-color: aliceblue;
   position: absolute;
   right: -0.5rem;
-  top: 0.1rem;
+  top: 0.3rem;
 }
 
 .main-header {}
 
 .main-header_in {
-  margin: 2rem 25% 2rem 25%;
+  margin: 2rem 20% 2rem 20%;
   display: flex;
-  justify-content: stretch;
+  justify-content: space-between;
 
+}
+
+.main_third {
+  width: 33%;
+}
+
+.user {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 0.4rem;
+  transition: 0.5s;
+}
+
+.user:hover {
+  color: #5bb000;
 }
 
 .user img {
@@ -90,6 +137,14 @@ a {
   color: white;
   font-weight: bolder;
   max-width: 35%;
+
+  h4 {
+    font-size: large;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
 }
 
 .slider1_input h1 {
@@ -151,11 +206,11 @@ a {
   color: white;
 }
 
-.scroller_ad button {
+/* .scroller_ad button {
   background: #5bb000;
   border: none;
   color: white;
-}
+} */
 
 /* Big Dishes */
 .dishes_container {
@@ -169,12 +224,26 @@ a {
   gap: 1rem;
 }
 
+.card {
+  margin: 3rem 2rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+  /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+}
+
 /* Overflow ads */
 
 .overflow_container {
   margin: 8rem 0 8rem;
   gap: 30px;
 }
+
+@media (max-width: 1138px) {
+  .transf_overflow {
+    flex-direction: column;
+  }
+}
+
 
 .overlay {
   overflow: hidden;
@@ -217,6 +286,18 @@ a {
   padding: 70px 33% 0 33%;
 }
 
+@media (max-width: 1174px) {
+  .parallax {
+    padding: 70px 20% 0 20%;
+  }
+}
+
+@media (max-width: 640px) {
+  .parallax {
+    padding: 70px 10% 0 10%;
+  }
+}
+
 .people {
   border-radius: 666px;
   width: 100px;
@@ -234,6 +315,9 @@ a {
     transition: 0.2s;
     background-color: white;
     border: 0;
+    min-height: 0;
+    min-width: 0;
+    border-radius: 0%;
   }
 
   .parallax_button:hover {
@@ -244,7 +328,12 @@ a {
 
 /* Footer */
 
+footer {
+  background-color: lightgray;
+}
+
 .footer_flex {
+  padding: 4rem 0 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -252,6 +341,10 @@ a {
   text-align: justify;
   align-items: flex-start;
 
+  a:hover {
+    transition: 0.2s;
+    color: var(--button-green);
+  }
 }
 
 .social_icons {
