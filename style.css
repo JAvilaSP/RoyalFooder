@@ -46,7 +46,7 @@ button:hover {
 }
 
 /* Header */
-header #top-header {
+#top-header {
   background-color: var(--highlight);
   color: white;
 }
@@ -83,10 +83,17 @@ header #top-header {
   top: 0.3rem;
 }
 
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 20;
+  background-color: white;
+}
+
 .main-header {}
 
 .main-header_in {
-  margin: 2rem 20% 2rem 20%;
+  padding: 2rem 20% 2rem 20%;
   display: flex;
   justify-content: space-between;
 
@@ -291,6 +298,10 @@ header #top-header {
   position: relative;
 }
 
+.overlay img:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(110%);
+}
 
 .overlay h4 {
   position: absolute;
