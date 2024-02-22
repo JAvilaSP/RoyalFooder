@@ -120,6 +120,42 @@ header {
   width: 24px;
 }
 
+.a_hamburger {
+  display: none;
+
+  img {
+    padding: 0.5rem;
+    background-color: lightgrey;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+  }
+
+  img:hover {
+    background-color: gray;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-header_in {
+    padding: 2rem 10% 2rem 10%;
+
+    form {
+      display: none;
+    }
+
+    div {
+      display: none;
+    }
+
+    .a_hamburger {
+      display: block;
+    }
+  }
+
+  .main_third {
+    width: 50%;
+  }
+}
 
 
 /* Slider 1 */
@@ -129,7 +165,7 @@ header {
 
 .slider1_container img {
 
-  width: 100%;
+  /* width: 100%; */
 }
 
 .slider1_input {
@@ -161,8 +197,8 @@ header {
   font-size: 60px;
 }
 
-@media (max-width: 1168px) {
-  .slider1_input {
+/* @media (max-width: 1168px) { */
+/* .slider1_input {
     h1 {
       margin-top: 0;
       margin-bottom: 0;
@@ -170,7 +206,7 @@ header {
     }
   }
 }
-
+*/
 @media (max-width: 730px) {
   .slider1_input {
     h1 {
@@ -178,11 +214,15 @@ header {
       margin-bottom: 0;
       font-size: 22px;
     }
+
+    */
   }
+
+
 }
 
 @media (max-width: 566px) {
-  .slider1_input {
+  /* .slider1_input {
     h1 {
       margin-top: 0;
       margin-bottom: 0;
@@ -198,6 +238,10 @@ header {
       min-height: 0;
       min-width: 0;
     }
+  } */
+
+  .ads_flex {
+    flex-direction: column;
   }
 }
 
@@ -235,6 +279,7 @@ header {
   margin: 0 auto;
   gap: 2rem;
   scroll-behavior: smooth;
+
 }
 
 .scroller_img {
@@ -247,11 +292,18 @@ header {
 .scroller_ad {
   padding: 1rem 6rem;
   background-color: #143848;
-  width: fit-content;
+  /* width: fit-content; */
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: white;
+}
+
+@media (max-width: 674px) {
+  .scroller_ad {
+    padding: 20px 20px;
+
+  }
 }
 
 /* .scroller_ad button {
@@ -270,6 +322,7 @@ header {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -277,6 +330,10 @@ header {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 
   /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+}
+
+.card-title {
+  height: 60px;
 }
 
 /* Overflow ads */
