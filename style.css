@@ -1,7 +1,19 @@
 :root {
   --highlight: #143848;
   --button-green: #5bb000;
+  --dark-green: #3a6b06;
+  --blanco: #fff;
+  --gris-suave: #d3d3d3;
 }
+
+@font-face {
+  font-family: 'Coolvetica';
+
+  src: url('./fonts/coolvetica/coolvetica\ rg.otf') format('truetype');
+
+}
+
+
 
 * {
   align-items: center;
@@ -12,7 +24,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Coolvetica', sans-serif;
+
 }
 
 ul {}
@@ -26,29 +39,37 @@ a {
   color: inherit;
 }
 
-button {
+button:not(.parallax_button, #laNoche, #elDia) {
   background-color: var(--button-green);
-  color: white;
+  color: var(--blanco);
   min-width: 200px;
   min-height: 50px;
   border: solid;
   border-style: groove;
   border-width: 2px;
-  border-color: #3a6b06;
+  border-color: var(--dark-green);
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 00;
   font-size: 20px;
   transition: 0.2s;
 }
 
-button:hover {
-  background-color: #3a6b06;
+button:not(.parallax_button, #laNoche, #elDia):hover {
+  background-color: var(--dark-green);
+}
+
+p {
+  font-weight: 0;
+}
+
+h5 {
+  font-size: 25px;
 }
 
 /* Header */
 #top-header {
   background-color: var(--highlight);
-  color: white;
+  color: var(--blanco);
 }
 
 .top-header {
@@ -87,7 +108,7 @@ header {
   position: sticky;
   top: 0px;
   z-index: 20;
-  background-color: white;
+  background-color: var(--blanco);
 }
 
 .main-header {}
@@ -113,7 +134,7 @@ header {
 }
 
 .user:hover {
-  color: #5bb000;
+  color: var(--button-green);
 }
 
 .user img {
@@ -165,7 +186,7 @@ header {
 
 .slider1_container img {
 
-  /* width: 100%; */
+  width: 1920px;
 }
 
 .slider1_input {
@@ -177,7 +198,7 @@ header {
   /* right: 40%; */
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--blanco);
   font-weight: bolder;
   /* max-width: 35%; */
 
@@ -214,11 +235,7 @@ header {
       margin-bottom: 0;
       font-size: 22px;
     }
-
-    */
   }
-
-
 }
 
 @media (max-width: 566px) {
@@ -248,7 +265,7 @@ header {
 
 /* Ads */
 .ads_container {
-  background-color: whitesmoke;
+  background-color: var(--gris-suave);
 }
 
 .ads_flex {
@@ -272,6 +289,7 @@ header {
   h2 {
     margin-bottom: 2rem;
   }
+
 }
 
 .scroller {
@@ -291,7 +309,7 @@ header {
   padding: 2rem;
   border-width: 4px;
   border-style: dotted;
-  border-color: lightgrey;
+  border-color: var(--gris-suave);
 }
 
 .scroller_ad {
@@ -301,7 +319,7 @@ header {
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  color: white;
+  color: var(--blanco);
 }
 
 @media (max-width: 674px) {
@@ -314,13 +332,18 @@ header {
 /* .scroller_ad button {
   background: #5bb000;
   border: none;
-  color: white;
+  color: var(--blanco);
 } */
 
 /* Big Dishes */
 .dishes_container {
-  background-color: lightgrey;
-  /* padding: 6rem 15% 6rem 15%; */
+  background-color: var(--gris-suave);
+  padding: 4rem;
+
+  #divider {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .flex_buttons {
@@ -328,6 +351,7 @@ header {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -396,7 +420,7 @@ header {
   background-size: cover;
   margin: 6rem 0 6rem 0;
   position: relative;
-  color: white;
+  color: var(--blanco);
 
   padding: 70px 33% 0 33%;
 }
@@ -428,7 +452,7 @@ header {
     height: 10px;
     width: 10px;
     transition: 0.2s;
-    background-color: white;
+    background-color: var(--blanco);
     border: 0;
     min-height: 0;
     min-width: 0;
@@ -444,7 +468,7 @@ header {
 /* Footer */
 
 footer {
-  background-color: lightgray;
+  background-color: var(--gris-suave);
 }
 
 .footer_flex {
@@ -488,4 +512,76 @@ footer {
 
 #li {
   background-color: #0077b5;
+}
+
+/* --- WhatsApp --- */
+.whatsapp__container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.1s ease-in;
+}
+
+.whatsapp__icon {
+  position: inherit;
+
+}
+
+.whatsapp__text {
+  opacity: 0;
+
+  position: absolute;
+  /* display: none; */
+  margin: 0 auto;
+  text-decoration: none;
+  color: var(--blanco);
+  /* top: 50%; */
+  padding: 15px;
+  background-color: var(--button-green);
+  border-radius: 20px;
+  margin-top: 4px;
+  margin-left: -145px;
+  z-index: -200;
+
+  border: solid;
+  border-color: var(--dark-green);
+  transition: opacity 0.2s;
+
+}
+
+.whatsapp__container:hover {
+  transform: scale(90%);
+
+  .whatsapp__text {
+    display: inline;
+    opacity: 1;
+
+  }
+}
+
+/* Luz / noche */
+.icono-luz {
+  position: fixed;
+  bottom: 8rem;
+  right: 2rem;
+  transition: 0.5s;
+}
+
+.icono-luz-svg {
+  width: 2rem;
+  /* background-color: aliceblue; */
+  /* border-radius: 666px; */
+  color: yellow;
+}
+
+.icono-dark {
+  width: 2rem;
+  /* background-color: aliceblue; */
+  /* border-radius: 666px; */
+  color: gold;
+  fill: gold;
+}
+
+.desterrado {
+  right: -4rem;
 }
