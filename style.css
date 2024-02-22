@@ -268,6 +268,10 @@ header {
 /* Categories */
 .section_categories {
   margin: 5rem 0 5rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
 }
 
 .scroller {
@@ -275,8 +279,9 @@ header {
   justify-content: baseline;
   overflow-x: auto;
   overflow-y: hidden;
-  width: 60%;
+  /* width: 60%; */
   margin: 0 auto;
+  margin: 3rem 20% 4rem 20%;
   gap: 2rem;
   scroll-behavior: smooth;
 
