@@ -20,7 +20,9 @@ function cambiarApi() {
         // console.log(data["meals"][0]["strMealThumb"]);
         container.innerHTML = `
           <div class="card" style="width: 18rem;">
-              <img src="${data["meals"][0]["strMealThumb"]}" class="card-img-top" alt="...">
+              <div id="support">
+                <img src="${data["meals"][0]["strMealThumb"]}" class="card-img-top" alt="...">
+              </div>
               <div class="card-body">
                   <h5 class="card-title">${data["meals"][0]["strMeal"]}</h5>
                   <p class="card-text">Country of origin: ${data["meals"][0]["strArea"]}</p>

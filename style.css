@@ -182,11 +182,13 @@ header {
 /* Slider 1 */
 .slider1_container {
   position: relative;
+  overflow: hidden;
 }
 
-.slider1_container img {
-
+.slider1_container #main-slide {
+  transition: opacity 0.5s ease;
   width: 1920px;
+
 }
 
 .slider1_input {
@@ -209,6 +211,20 @@ header {
   }
 
 
+
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(200, 200, 200, 0.5);
+  padding: 0.4rem;
+  border-radius: 111px;
+  transition: background-color 0.3s ease;
+}
+
+.next:hover {
+  background-color: rgba(128, 128, 128, 0.7);
 }
 
 .slider1_input h1 {
@@ -338,7 +354,7 @@ header {
 /* Big Dishes */
 .dishes_container {
   background-color: var(--gris-suave);
-  padding: 4rem;
+  /* padding: 4rem; */
 
   #divider {
     margin-top: 2rem;
@@ -358,7 +374,17 @@ header {
   margin: 2rem auto;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 
+
+}
+
+#support {
+  overflow: hidden;
+
   /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+  img:hover {
+    transform: scale(110%);
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .card-title {
@@ -440,6 +466,8 @@ header {
 .people {
   border-radius: 666px;
   width: 100px;
+
+  transition: 0.5s ease;
 }
 
 .parallax_buttons {
@@ -518,7 +546,7 @@ footer {
 .whatsapp__container {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 2rem;
   transition: 0.1s ease-in;
 }
 

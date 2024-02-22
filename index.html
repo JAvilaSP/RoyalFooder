@@ -67,12 +67,18 @@
     <!-- Slider -->
     <section>
         <div class="slider1_container">
-            <img src="./img/slider1/main-banner-2-1.jpg" alt="">
+            <img src="./img/slider1/main-banner-2-1.jpg" alt="" id="main-slide">
             <div class="slider1_input">
                 <h4>2x1 en todos nuestros productos</h4>
                 <h1>Sopa de Pollo con extra de sal</h1>
                 <button>Comprar ahora</button>
             </div>
+            <a class="next" style="left: 1rem;" onclick="cambiarSlide()">
+                <img src="./img/caret-left-fill.svg" alt="">
+            </a>
+            <a class="next" style="right: 1rem;" onclick="cambiarSlide()">
+                <img src="./img/caret-right-fill.svg" alt="">
+            </a>
         </div>
     </section>
 
@@ -244,9 +250,9 @@
             <p id="person_occupation">Administrador de Sistemas</p>
 
             <div class="parallax_buttons">
-                <button class="parallax_button"></button>
-                <button class="parallax_button"></button>
-                <button class="parallax_button"></button>
+                <button class="parallax_button" onclick="cambiarCapibara(0)"></button>
+                <button class="parallax_button" onclick="cambiarCapibara(1)"></button>
+                <button class="parallax_button" onclick="cambiarCapibara(2)"></button>
             </div>
         </div>
     </section>
