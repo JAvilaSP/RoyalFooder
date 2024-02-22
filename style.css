@@ -709,4 +709,11 @@ footer {
   .formMaps {
     width: 90%;
   }
+
+  .mapsVisitanos {
+
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
 }
