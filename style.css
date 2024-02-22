@@ -13,6 +13,13 @@
 
 }
 
+@font-face {
+  font-family: 'Coolvetica-hv';
+
+  src: url('./fonts/coolvetica/coolvetica\ compressed\ hv.otf') format('truetype');
+
+}
+
 
 
 * {
@@ -176,6 +183,12 @@ header {
   .main_third {
     width: 50%;
   }
+}
+
+.nav-header {
+  height: 2px;
+  width: 100%;
+  background-color: var(--gris-suave);
 }
 
 
@@ -612,4 +625,88 @@ footer {
 
 .desterrado {
   right: -4rem;
+}
+
+/* Formulario */
+
+.errorregex {
+  border-color: #dc3545 !important;
+  background-color: #f8d7da !important;
+  transition: 0.15s ease-in-out;
+
+}
+
+.formSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 4rem 0;
+}
+
+.divImagenForm {
+  width: 30%;
+  border-radius: 15px;
+  padding: 13px;
+  background-color: var(--button-green);
+  margin-left: 5rem;
+}
+
+.formImagen {
+  width: 100%;
+  border-radius: 15px;
+  padding: 5px;
+  background-color: var(--blanco);
+}
+
+.formMaps {
+  border-radius: 15px;
+  padding: 5px;
+  background-color: var(--highlight);
+}
+
+.formMapsContainer {
+  border-radius: 15px;
+  padding: 70px 13px 13px 13px;
+  background-color: var(--button-green);
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.mapsVisitanos {
+  font-family: "Coolvetica-hv", sans-serif;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 66px;
+  color: var(--blanco);
+}
+
+#formMainDiv {
+  width: 50%;
+}
+
+@media (max-width: 970px) {
+  .formSection {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #formMainDiv {
+    width: 90%;
+  }
+
+  .divImagenForm {
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 300px;
+  }
+
+  .formMaps {
+    width: 90%;
+  }
 }

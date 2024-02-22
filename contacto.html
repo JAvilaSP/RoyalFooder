@@ -5,10 +5,282 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Fooder</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div id="top-header">
+    <div class="top-header">
+      <div>
+        <ul class="top-header__half">
+          <li class="lista_header1">
+            <a href="index.html">Sobre nosotros</a>
+          </li>
+          <li class="lista_header1">
+            <a href="">Blog</a>
+          </li>
+          <li class="lista_header1">
+            <a href="">Contactanos</a>
+          </li>
+          <li class="lista_header1">
+            <a href="">Preguntas Cómunes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <a href="">Reserva y Consulta: 652 04 54 84</a>
+      </div>
+    </div>
+  </div>
+  <header>
 
+    <div class="main-header">
+      <div class="main-header_in">
+        <form action="" class="main_third">
+          <input type="text" placeholder="Busque su sopa preferida">
+        </form>
+
+        <img class="main_third" src="./img/logo.svg" alt="" style="max-width: 340px;">
+
+        <div class="main_third">
+          <a href="" class="user">
+            <img src="./img/person.svg" alt="">
+            <!-- <img src="./img/person-fill.svg" alt=""> -->
+            <p style="margin: 0;">Iniciar Sesión</p>
+          </a>
+        </div>
+        <a href="" class="a_hamburger">
+          <img src="./img/list.svg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="nav-header">
+
+    </div>
+
+  </header>
+
+
+  <section class="formSection">
+    <div id="formMainDiv">
+      <form class="col-12" onsubmit="return validarFormulario()">
+        <div class="mb-3 d-flex">
+          <div class="me-3" style="flex: 1;">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" required>
+          </div>
+          <div style="flex: 1;">
+            <label for="apellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" required>
+        </div>
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="direccion" required>
+        </div>
+        <div class="mb-3 d-flex">
+          <div class="me-3" style="flex: 1;">
+            <label for="colorFavorito" class="form-label">Color favorito</label>
+            <select class="form-select" id="colorFavorito" required>
+              <option value="" selected disabled>Selecciona un color</option>
+              <option value="azul">Azul</option>
+              <option value="rojo">Rojo</option>
+              <option value="verde">Verde</option>
+              <option value="amarillo">Amarillo</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div style="flex: 1;">
+            <label for="telefono" class="form-label">Número de teléfono</label>
+            <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" required>
+          </div>
+        </div>
+        <button onclick="validarFormulario()" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+    <div class="divImagenForm">
+      <img src="./img/raw-vegetables-wooden-board.jpg" alt="Imagen" class="formImagen">
+    </div>
+    <!-- <a
+      href="https://www.freepik.es/foto-gratis/verduras-crudas-sobre-tabla-madera_10095863.htm#fromView=search&page=1&position=35&uuid=396b3796-1b41-4f00-aa9e-ba680930947f">Imagen
+      de Racool_studio en Freepik</a> -->
+  </section>
+
+  <section>
+    <div class="formMapsContainer">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71347.4377724474!2d-7.545071348526696!3d40.26656641195646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d237441393953%3A0xebeca56accbdc312!2sO%20Sopas!5e1!3m2!1ses!2ses!4v1708634429289!5m2!1ses!2ses"
+        width="800" height="600" class="formMaps" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2 class="mapsVisitanos">¡ Visita nuestro local !</h2>
+    </div>
+
+  </section>
+
+  <script>
+    function validarFormulario() {
+      var expRegPassFuerte = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
+      var expRegEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      var expRegTelefono = /^[0-9]{9}$/;
+
+      let nombre = document.querySelector("#nombre");
+      let apellidos = document.querySelector("#apellidos");
+      let email = document.querySelector("#exampleInputEmail1");
+      let direccion = document.querySelector("#direccion");
+      let colorFavorito = document.querySelector("#colorFavorito");
+      let telefono = document.querySelector("#telefono");
+
+      let camposValidos = true;
+
+      if (!/[A-Za-zÁÉÍÓÚáéíóú\s]+/.test(nombre.value)) {
+        nombre.classList.add("errorregex");
+        camposValidos = false;
+      } else {
+        nombre.classList.remove("errorregex");
+      }
+
+      if (!/[A-Za-zÁÉÍÓÚáéíóú\s]+/.test(apellidos.value)) {
+        apellidos.classList.add("errorregex");
+        camposValidos = false;
+      } else {
+        apellidos.classList.remove("errorregex");
+      }
+
+      if (!expRegEmail.test(email.value)) {
+        email.classList.add("errorregex");
+        camposValidos = false;
+      } else {
+        email.classList.remove("errorregex");
+      }
+
+      if (!expRegTelefono.test(telefono.value)) {
+        telefono.classList.add("errorregex");
+        camposValidos = false;
+      } else {
+        telefono.classList.remove("errorregex");
+      }
+
+      return camposValidos;
+    }
+  </script>
+
+
+
+  <footer>
+
+    <div class="footer_flex">
+      <div>
+        <h3>Información</h3>
+        <a href="">
+          <p>
+            <img src="./img/geo-alt-fill.svg" alt="">
+            Calle Butspri, 5, Bloque B, puerta 667
+          </p>
+        </a>
+        <a href="">
+          <p>
+            <img src="./img/telephone-fill.svg" alt="">
+            +41 552 45 55 65
+          </p>
+        </a>
+        <a href="">
+          <p>
+            <img src="./img/envelope-fill.svg" alt="">
+            profememuero@digicasa.com
+          </p>
+        </a>
+      </div>
+      <div>
+        <h3>Enlaces</h3>
+        <a href="">
+          <p>Contactanos</p>
+        </a>
+        <a href="">
+          <p>No nos contactes</p>
+        </a>
+        <a href="">
+          <p>Why are we still here</p>
+        </a>
+        <a href="">
+          <p>Just to suffer?</p>
+        </a>
+      </div>
+      <div>
+        <h3>Los Busprin</h3>
+        <a href="">
+          <p>Papipop+</p>
+        </a>
+        <a href="">
+          <p>Laga Chapón</p>
+        </a>
+        <a href="">
+          <p>Eldes Pojado</p>
+        </a>
+        <a href="">
+          <p>Elso Pazo</p>
+        </a>
+      </div>
+      <div>
+        <h3>Nuestras redes socialea</h3>
+        <a href="">
+          <img src="./img/social/facebook.svg" alt="" class="social_icons" id="fb">
+        </a>
+        <a href="">
+          <img src="./img/social/twitter-x.svg" alt="" class="social_icons" id="tw">
+        </a>
+        <a href="">
+          <img src="./img/social/youtube.svg" alt="" class="social_icons" id="yt">
+        </a>
+        <a href="">
+          <img src="./img/social/linkedin.svg" alt="" class="social_icons" id="li">
+        </a>
+        <a href="">
+          <img src="./img/social/instagram.svg" alt="" class="social_icons" id="ig">
+        </a>
+        <h3>Descargate nuestra app</h3>
+        <a href="">
+          <img src="./img/dl/app-store.png" alt="">
+        </a>
+        <a href="">
+          <img src="./img/dl/google-play-1.png" alt="">
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ---- El Whatsapp ---- -->
+  <div class="whatsapp__container">
+    <a href="#" style="text-decoration: none; position: relative;">
+      <p class="whatsapp__text">Contáctanos</p><span>
+        <img src="img/icons/whatsapp.png" alt="" class="whatsapp__icon">
+      </span>
+    </a>
+  </div>
+
+  <!-- <div class="icono-luz"> -->
+  <button id="elDia" onclick="cambiar(1)" class="btn btn-light icono-luz desterrado">
+    <img src="./img/icons/brightness-high-fill.svg" class="icono-luz-svg">
+  </button>
+  <button id="laNoche" onclick="cambiar(0)" class="btn btn-dark icono-luz ">
+    <img src="./img/icons/moon-stars-fill.svg" class="icono-dark">
+  </button>
+
+  <script src="noche2.js"></script>
+  <script src="api.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Creditos a Template Monster -->
 </body>
 
 </html>

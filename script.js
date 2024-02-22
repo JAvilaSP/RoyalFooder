@@ -36,7 +36,7 @@ function cambiarCapibara(apos) {
   const nombre_v = document.querySelector('.parallax #person_name');
   const titulo = document.querySelector('.parallax #person_occupation');
 
-  img.style.opacity = 0.5;
+  img.style.opacity = 0.1;
 
 
   setTimeout(() => {
