@@ -12,11 +12,20 @@ if (valorCookie == "1") {
   //console.log(noche.classList);
   noche.classList.add("desterrado");
   dia.classList.remove("desterrado");
+  document.documentElement.style.setProperty('--gris-suave', '#4d4d4d');
+  document.querySelector("header").style.setProperty("background-color", "darkgrey");
+  document.documentElement.style.setProperty('--button-green', '#3a6b06');
+  document.documentElement.style.setProperty('--dark-green', '#5bb000');
 } else {
   localStorage.setItem("colorin", "0");
   documento.setAttribute("data-bs-theme", "white");
   dia.classList.add("desterrado");
   noche.classList.remove("desterrado");
+  document.documentElement.style.setProperty('--gris-suave', '#d3d3d3');
+  document.querySelector("header").style.setProperty("background-color", "var(--blanco)");
+  document.documentElement.style.setProperty('--button-green', '#5bb000');
+  document.documentElement.style.setProperty('--dark-green', '#3a6b06');
+  
 }
 
 function cambiar(a) {
