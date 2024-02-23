@@ -289,18 +289,18 @@ header {
     }
   } */
 
-  .ads_flex {
+  .announce_flex {
     flex-direction: column;
   }
 }
 
 
-/* Ads */
-.ads_container {
+/* announce */
+.announce_container {
   background-color: var(--gris-suave);
 }
 
-.ads_flex {
+.announce_flex {
   padding: 6rem 0 6rem 0;
   display: flex;
   justify-content: center;
@@ -309,7 +309,7 @@ header {
   text-align: center;
 }
 
-.ads_svg {
+.announce_svg {
   width: 6rem;
   align-self: center;
 }
@@ -407,7 +407,7 @@ header {
   height: 60px;
 }
 
-/* Overflow ads */
+/* Overflow announce */
 
 .overflow_container {
   margin: 8rem 0 8rem;
