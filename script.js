@@ -8,8 +8,10 @@ function cambiarSlide() {
 
   const img = document.querySelector('.slider1_container #main-slide');
   const h1 = document.querySelector('.slider1_container h1');
+  const botoner = document.querySelector('.slider1_input button');
 
   img.style.opacity = 0;
+  botoner.style.opacity = 0;
 
 
   setTimeout(() => {
@@ -17,7 +19,7 @@ function cambiarSlide() {
     img.src = imagenes[sopa];
     h1.textContent = textos[sopa];
 
-
+    botoner.style.opacity = 1;
     img.style.opacity = 1;
   }, 500);
 

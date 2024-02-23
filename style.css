@@ -218,6 +218,9 @@ header {
   /* max-width: 35%; */
 
 
+  button {
+    transition: 0.5s ease;
+  }
 
   h4 {
     font-size: large;
