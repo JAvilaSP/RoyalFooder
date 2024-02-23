@@ -2,7 +2,7 @@ cambiarApi();
 var sopa = 0;
 function cambiarSlide() {
   // Array de imágenes y textos para cada opción
-  const imagenes = ["./img/slider1/main-banner-2-1.jpg", "./img/slider1/main-banner-1-1.jpg"];
+  const imagenes = ["./img/slider1/main-banner-2-1.webp", "./img/slider1/main-banner-1-1.webp"];
   const textos = ["Sopa de Pollo con extra de sal", "Sopa de Pollo sin extra de sal"];
 
 

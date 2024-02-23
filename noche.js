@@ -12,11 +12,15 @@ if (valorCookie == "1") {
   //console.log(noche.classList);
   noche.classList.add("desterrado");
   dia.classList.remove("desterrado");
+      document.documentElement.style.setProperty('--gris-suave', '#4d4d4d');
+    document.querySelector("header").style.setProperty("background-color", "darkgrey");
 } else {
   localStorage.setItem("colorin", "0");
   documento.setAttribute("data-bs-theme", "white");
   dia.classList.add("desterrado");
   noche.classList.remove("desterrado");
+      document.documentElement.style.setProperty('--gris-suave', '#d3d3d3');
+    document.querySelector("header").style.setProperty("background-color", "var(--blanco)");
 }
 
 function cambiar(a) {
